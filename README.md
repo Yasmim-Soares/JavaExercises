@@ -18,8 +18,8 @@ Below is the list of solved exercises, organized by topic and functionality:
 
 | Exercise | Description | Status |
 | :--- | :--- | :---: |
-| **Shipping Calculator** | Calculates freight costs based on weight and destination. Practicing package structure (Views/Application). | ✅ Completed |
-| **Example Exercise** | Brief description of what the code does and the Java concepts applied. | ⏳ In Progress |
+| **Shipping Calculator** | Calculates freight costs based on weight and destination. Practicing package structure (Views/Entities). | ✅ Completed |
+| **Bank Account** | Reads the data of a bank account then proceeds to do a withdraw. Practicing package structure (Views/Model) | ⏳ In Progress |
 | | | |
 
 ---
