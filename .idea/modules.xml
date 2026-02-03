@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankAccount/BankAccount.iml" filepath="$PROJECT_DIR$/BankAccount/BankAccount.iml" />
       <module fileurl="file://$PROJECT_DIR$/ExercisesJava.iml" filepath="$PROJECT_DIR$/ExercisesJava.iml" />
       <module fileurl="file://$PROJECT_DIR$/ShippingCalculator/ShippingCalculator.iml" filepath="$PROJECT_DIR$/ShippingCalculator/ShippingCalculator.iml" />
     </modules>

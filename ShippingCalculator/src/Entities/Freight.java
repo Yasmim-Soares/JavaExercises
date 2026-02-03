@@ -2,8 +2,6 @@ package Entities;
 
 public abstract class Freight {
     private Double distance;
-    ExpressFreight ExpressFreight = new ExpressFreight;
-    StandardFreight StandardFreight = new StandardFreight;
 
     public Freight(Double distance) {
         this.distance = distance;
