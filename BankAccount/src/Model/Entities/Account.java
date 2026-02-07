@@ -1,6 +1,6 @@
-package Model.Entities;
+package model.entities;
 
-import Model.exceptions.WithdrawException;
+import model.exceptions.WithdrawException;
 
 public class Account {
     private int number;
@@ -8,15 +8,18 @@ public class Account {
     private Double balance;
     private Double withdrawLimit;
 
-    public Account(int number, String holder, Double balance, Double withdrawLimit) {
+    public Account(Double balance, String holder, int number, Double withdrawLimit) {
         if(this.balance == 0){
             throw new WithdrawException("Withdraw error: Not enough balance");
         }
-        this.number = number;
-        this.holder = holder;
         this.balance = balance;
+        this.holder = holder;
+        this.number = number;
         this.withdrawLimit = withdrawLimit;
     }
+
+
+
 
     public int getNumber() {
         return number;
@@ -64,4 +67,10 @@ public class Account {
 
         this.balance -= amount;
     }
+
+    public String toString(){
+        return "New balance: " + balance;
+    }
+
+
 }
