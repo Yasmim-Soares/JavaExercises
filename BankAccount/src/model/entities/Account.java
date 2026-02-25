@@ -9,17 +9,15 @@ public class Account {
     private Double withdrawLimit;
 
     public Account(Double balance, String holder, int number, Double withdrawLimit) {
-        if(this.balance == 0){
-            throw new WithdrawException("Withdraw error: Not enough balance");
-        }
         this.balance = balance;
         this.holder = holder;
         this.number = number;
         this.withdrawLimit = withdrawLimit;
+
+        if(this.balance == 0){
+            throw new WithdrawException("Withdraw error: Not enough balance");
+        }
     }
-
-
-
 
     public int getNumber() {
         return number;
@@ -53,12 +51,13 @@ public class Account {
         this.withdrawLimit = withdrawLimit;
     }
 
+
     public void deposit(Double amount){
         this.balance += amount;
     }
 
     public void withdraw(Double amount){
-        if(this.balance == 0){
+        if(this.balance < amount){
             throw new WithdrawException("Withdraw error: Not enough balance");
         }
         if(amount > this.withdrawLimit){
@@ -69,7 +68,7 @@ public class Account {
     }
 
     public String toString(){
-        return "New balance: " + balance;
+        return "New balance: " + this.balance;
     }
 
 
