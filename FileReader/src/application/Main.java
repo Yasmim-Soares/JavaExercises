@@ -1,21 +1,23 @@
 package application;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
 
-        String strPath = "C:\\Users\\yasmi\\OneDrive\\Área de Trabalho\\CURSOS PROGRAMAÇÃO\\Java POO\\ExercícioFileReader";
+        String[] lines = new String[] {"TV LED", "1290.99", "1", "Video Game Chair", "350.50","3", "Iphone X", "900.00","2", "Samsung Galaxy", "9,850.00", "2"};
+        String path = "C:\\Users\\yasmi\\OneDrive\\Documentos\\AtividadeFile\\source.csv";
 
-        File path = new File(strPath);
-
-        boolean succes = new File(strPath + "\\out").mkdir();
-
+        try(BufferedWriter bw = new BufferedWriter(new FileWriter(path))){
+            for (String line : lines){
+                bw.write(line);
+                bw.newLine();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         sc.close();
     }
 }
